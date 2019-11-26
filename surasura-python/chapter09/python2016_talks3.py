@@ -12,8 +12,8 @@ for presentation_html in presentation_html_list:
 
     if"(en)"in presentation_title_text:
         language = "English"
-        title = presentation_title_text.replace("¥xa0(en)", "")
+        title = presentation_title_text.replace("\xa0(en)", "")
     elif"(ja)"in presentation_title_text:
         language = "Japanese"
-        title = presentation_title_text.replace("¥xa0(ja)", "")
-        print("{0:<10}|{1}".format(language, title))
+        title = presentation_title_text.replace("\xa0(ja)", "")
+    print("{0:<10}|{1}".format(language, title))
