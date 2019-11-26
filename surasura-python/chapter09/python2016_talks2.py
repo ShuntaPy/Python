@@ -8,12 +8,12 @@ presentation_html_list = soup.find_all("div", class_="presentation")
 print("language | title")
 print("--------- | ---------")
 for presentation_html in presentation_html_list:
-    presentation_title_text = presentation_html.h3.get_text()
+    presentation_title = presentation_html.h3.get_text()
 
-    if"(en)"in presentation_title_text:
+    if"(en)"in presentation_title:
         language = "English"
-        title = presentation_title_text.replace("¥xa0(en)", "")
-    elif"(ja)"in presentation_title_text:
+        title = presentation_title.replace("\xa0(en)", "")
+    elif"(ja)"in presentation_title:
         language = "Japanese"
-        title = presentation_title_text.replace("¥xa0(ja)", "")
-        print("{0}|{1}".format(language,title))
+        title = presentation_title.replace("\xa0(ja)", "")
+    print("{0}|{1}".format(language,title))
