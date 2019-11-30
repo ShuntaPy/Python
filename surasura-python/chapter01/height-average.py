@@ -7,3 +7,4 @@ for i in heigths.values():
 average=total/len(heigths)
 
 print("平均身長は{0}cmです。".format(average))
+ 
