@@ -1,6 +1,5 @@
 import requests
 
-result = requests.get("http://bang-dream-news.com/")
+result = requests.get("https://www.yokohama-stadium.co.jp/")
 print(result.text)
 
-class_=("pageWrap toppage js-pageWrap"))
